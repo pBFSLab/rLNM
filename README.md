@@ -11,26 +11,25 @@ The repository contains two main modules:
 
 ## Required Data
 
-The sensitivity analysis requires a normative functional connectivity (FC) matrix (~600 MB).
+The sensitivity analysis requires a normative functional connectivity (FC) matrix (~600 MB), stored at:
 
-Due to GitHub's file size limitations, the matrix is provided separately in [Release v1.0](https://github.com/pBFSLab/rLNM/releases/tag/v1.0).
+`C1_sensitivity_test/template/rho_z_mean.mat`
 
-**Instructions:**
+This file is managed using **Git Large File Storage (Git LFS)**.
 
-1. Download `rho_z_mean.mat` from Release v1.0.
-2. Place the file in the `C1_sensitivity_test/template/` directory.
-3. Run the corresponding MATLAB analysis scripts.
-
-## Usage
-
-Clone or download this repository:
+To download the repository with the complete FC matrix, install [Git LFS](https://git-lfs.com/) and run:
 
 ```bash
+git lfs install
 git clone https://github.com/pBFSLab/rLNM.git
 ```
 
-Open MATLAB, navigate to the corresponding analysis directory, and run the scripts following their instructions. Adjust local file paths if necessary.
+The FC matrix will be automatically downloaded to the appropriate directory. No separate download is required.
+
+## Usage
+
+Open MATLAB, navigate to the corresponding analysis directory, and run the scripts. Adjust local file paths if necessary.
 
 ## License
 
-This repository is distributed under the Apache License 2.0.
+This project is licensed under the Apache License 2.0 License.
