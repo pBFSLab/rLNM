@@ -1,2 +1,0 @@
-group,n_lesion,n_lesion_file,n_dropped,overlap_max,overlap_pos_vox,sig_vox,p_min,q_min,n_fallback,n_unplaceable_roi,n_null_nan,sec_S345,sec_S6,sec_total
-Lan,58,58,0,0.9137931034482759,4221,1409,9.999000099990002e-05,0.000604084999663299,0,0,0,1085.5,0.0,1089.5
