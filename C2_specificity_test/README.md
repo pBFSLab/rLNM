@@ -44,7 +44,7 @@ C2_specificity_test/
 ├── README.md                 Chinese documentation
 ├── README_EN.md              English documentation (this file)
 │
-├── code_algorithm_latest/    algorithm scripts (same folder name as S1_sensitivity_test)
+├── code_algorithm/    algorithm scripts (same folder name as S1_sensitivity_test)
 │   ├── run_all.m             single entry point: adds paths, runs S1–S5
 │   ├── S1_load_inputs.m
 │   ├── S2_symptom_maps.m
@@ -100,7 +100,7 @@ C2_specificity_test/
 ### Full pipeline
 
 ```matlab
-cd('matlab_specificity/C2_specificity_test/code_algorithm_latest');
+cd('matlab_specificity/C2_specificity_test/code_algorithm');
 run_all
 ```
 
@@ -110,7 +110,7 @@ On the current dataset (184 lesions, 5,486 voxels, 10,000 permutations) the run 
 ### Running one step
 
 ```matlab
-cd('matlab_specificity/C2_specificity_test/code_algorithm_latest');
+cd('matlab_specificity/C2_specificity_test/code_algorithm');
 addpath('utils');
 
 S3_lesion_specific       % e.g. recompute residuals only
