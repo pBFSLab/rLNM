@@ -9,8 +9,8 @@ Inputs are two pre-computed sets of files:
 
 The main output is one **symptom-specific map** per SOI, together with all intermediate statistics.
 
-> The layout follows `../S1_sensitivity_test` (rLNM sensitivity analysis): scripts in
-> `code_algorithm_latest/`, input data in `disease_data/`, templates in `template/`,
+> The layout follows `../C1_sensitivity_test` (rLNM sensitivity analysis): scripts in
+> `code_algorithm/`, input data in `disease_data/`, templates in `template/`,
 > and all results under lowercase `output/`.
 
 ---
