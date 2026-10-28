@@ -9,7 +9,7 @@ TARGET_RMSE = 0.005;  % Stop matching at 0.5 percentage points of coverage RMSE
 
 % Reduce T0 if almost every proposed move is accepted. Increase it slightly
 % if the optimizer frequently becomes trapped.
-T0 = 1e-3;            % Initial simulated annealing temperature
+T0 = 1e-4;            % Initial simulated annealing temperature
 ALPHA = 0.997;        % Cooling coefficient
 
 P_THRESHOLD = 0.05;   % Accept only if the KS-test p-value is greater than this
