@@ -114,7 +114,7 @@ lesions may overlap.
 **Annealing:** up to 1,000 placement attempts per lesion and 1,000 optimization
 steps per candidate. The loss is the RMSE between sorted observed and synthetic
 lesion coverage proportions across all placement-mask voxels. The current 
-temperature is `T0 = 1e-3`, with cooling coefficient `ALPHA = 0.997`.
+temperature is `T0 = 1e-4`, with cooling coefficient `ALPHA = 0.997`.
 The optimizer stops early when `RMSE <= TARGET_RMSE`, currently 0.005, or reaches
 the iteration limit. 
 
