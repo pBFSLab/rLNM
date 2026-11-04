@@ -152,7 +152,7 @@ percentile labeling and signed overlap calculation to those files.
 | Stage | Annealing directory under `output/` | Repositioning directory under `output/` |
 |---|---|---|
 | S4 | `R3_null10000_generate_r_map_sortedfreq/` | `R3_null10000_generate_r_map_reposition/` |
-| S5, current code | `R4_LNM_rmaps_null_10000_results_percent25_sortedfreq/` | `R4_LNM_rmaps_null_10000_results_percent30_reposition/` |
+| S5, current code | `R4_LNM_rmaps_null_10000_results_percent25_sortedfreq/` | `R4_LNM_rmaps_null_10000_results_percent25_reposition/` |
 
 Each S5 file is named `Amnesia_LNM_rmap_null<NNNNN>.mat` and contains `overlap`.
 S4/S5 support `START_NULL` and skip existing output files by default. Only resume
