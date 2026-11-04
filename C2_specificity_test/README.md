@@ -84,7 +84,7 @@ C2_specificity_test/
 |---|---|
 | `disease_data/Lesion_rmaps/<SOI>/*.nii.gz` | Same 3D grid (32×32×32 for the current data); each file is one lesion; the file stem is the lesion ID |
 | `disease_data/Lesion_sensitivitymap/<SOI>/significant_8mm.nii.gz` | Binary 0/1; same grid as the r-maps, or resampled by affine |
-| `template/norm_8mm.nii.gz` | Optional. Falls back to `../S1_sensitivity_test/template/norm_8mm.nii.gz` |
+| `template/norm_8mm.nii.gz` | Optional. Falls back to `../C1_sensitivity_test/template/norm_8mm.nii.gz` |
 | Number of symptoms | Detected automatically from the subfolders of `disease_data/Lesion_rmaps/`; adding a symptom requires no code change |
 
 `<SOI>` is the symptom name, e.g. `Face`, `Lan`, `Spatial`. By default a missing sensitivity map is an error (`REQUIRE_SENSITIVITY_MAP = true`).
@@ -121,12 +121,12 @@ S5_permutation_fdr
 
 | Parameter | Location | Default |
 |---|---|---|
-| `REQUIRE_SENSITIVITY_MAP` | `code_algorithm_latest/S1_load_inputs.m` | `true` |
-| `BRAIN_MASK_FILE` | `code_algorithm_latest/S2_symptom_maps.m` | `template/norm_8mm.nii.gz` |
-| `fdr_level` | `code_algorithm_latest/utils/specificity_config.m` | `0.05` |
-| `sided` | `code_algorithm_latest/utils/specificity_config.m` | `'one'` |
-| `n_permutations` | `code_algorithm_latest/utils/specificity_config.m` | `10000` |
-| `n_workers` | `code_algorithm_latest/utils/specificity_config.m` | `8` |
+| `REQUIRE_SENSITIVITY_MAP` | `code_algorithm/S1_load_inputs.m` | `true` |
+| `BRAIN_MASK_FILE` | `code_algorithm/S2_symptom_maps.m` | `template/norm_8mm.nii.gz` |
+| `fdr_level` | `code_algorithm/utils/specificity_config.m` | `0.05` |
+| `sided` | `code_algorithm/utils/specificity_config.m` | `'one'` |
+| `n_permutations` | `code_algorithm/utils/specificity_config.m` | `10000` |
+| `n_workers` | `code_algorithm/utils/specificity_config.m` | `8` |
 
 `sided` is shared by S5 and `specificity_rethreshold`, so it only needs to be set once.
 
@@ -167,7 +167,7 @@ All volumes share the same 3D grid (32³ for the current data). The `.mat` files
 ### Re-thresholding without re-running permutations
 
 ```matlab
-addpath('code_algorithm_latest/utils');
+addpath('code_algorithm/utils');
 specificity_rethreshold
 ```
 
@@ -183,7 +183,7 @@ Recomputes significance for different FDR levels or specific-effect thresholds. 
 - **Sensitivity masks**: used only for the cross-symptom map in S2; they do not enter the regression or the tests.
 - **Grid consistency**: S1 checks shape and affine across symptoms; sensitivity maps on a different grid are resampled by nearest neighbour.
 - **Voxel order**: column-major (`vol(:)`), consistently across all steps.
-- **Paths**: all scripts resolve paths relative to this directory (one level up from `code_algorithm_latest/`), with no hard-coded absolute paths.
+- **Paths**: all scripts resolve paths relative to this directory (one level up from `code_algorithm/`), with no hard-coded absolute paths.
 
 ---
 
