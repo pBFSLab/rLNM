@@ -10,7 +10,7 @@ example on the MNI-8 mm resolution.
 ```text
 C1_sensitivity_test/
 |-- README.md
-|-- code_algorithm_latest/
+|-- code_algorithm/
 |   |-- S1_true_lesion_r_map_generate.m
 |   |-- S2_true_lesion_LNM_generate.m
 |   |-- S3_generate_null_model_annealing.m
