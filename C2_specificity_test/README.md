@@ -41,8 +41,7 @@ Significant voxels carry the specific effect of that SOI (standardized target �
 
 ```text
 C2_specificity_test/
-├── README.md                 Chinese documentation
-├── README_EN.md              English documentation (this file)
+├── README.md
 │
 ├── code_algorithm/    algorithm scripts (same folder name as S1_sensitivity_test)
 │   ├── run_all.m             single entry point: adds paths, runs S1–S5
